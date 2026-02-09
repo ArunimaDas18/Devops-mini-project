@@ -32,4 +32,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: node-proj/devops-app:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/devops-app:latest
