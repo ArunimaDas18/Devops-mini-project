@@ -12,7 +12,7 @@ CMD [ "node","index.js" ]
 #Stage 1 : build stage
 #  FROM node:20-alpine AS builder
 #  WORKDIR /app
-#  COPY package*.json ./
+#  COPY devops-app/package*.json .
 #  RUN npm ci --omit=dev
 #  COPY index.js
 
