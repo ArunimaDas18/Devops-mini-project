@@ -1,3 +1,4 @@
+# IAM Role for GitHub Actions OIDC
 resource "aws_iam_role" "github_oidc_role" {
   name = "github-oidc-role"
 
@@ -13,6 +14,9 @@ resource "aws_iam_role" "github_oidc_role" {
         Condition = {
           StringEquals = {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
+          }
+          StringLike = {
+            "token.actions.githubusercontent.com:sub" = "repo:ArunimaDas18/Devops-mini-project:*"
           }
         }
       }
