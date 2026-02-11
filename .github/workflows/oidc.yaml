@@ -1,0 +1,29 @@
+name: Test Github OIDC Role for Aws
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  test-oidc:
+    runs-on: ubuntu-latest
+    
+    steps:
+     - name: Test OIDC Role
+       uses: actions/checkout@v3
+
+     - name: Configure AWS credentials using OIDC
+       uses: aws-actions/configure-aws-credentials@v2
+       with:
+         role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+         aws-region: us-east-1
+
+     -  name: Verify AWS Credentials
+        run: aws sts get-caller-identity
+
+     -  name: List S3 buckets
+        run: aws s3 ls s3://tf-state-ad
+
+      
