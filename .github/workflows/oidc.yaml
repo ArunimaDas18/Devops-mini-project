@@ -1,5 +1,4 @@
-name: Test Github OIDC Role
-
+name: Test Github OIDC Role for AWS
 on:
   workflow_dispatch:
 
