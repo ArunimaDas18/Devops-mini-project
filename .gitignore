@@ -1,0 +1,70 @@
+#####################################
+# Terraform
+#####################################
+
+# Local .terraform directories
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform variable files (sensitive)
+*.tfvars
+*.tfvars.json
+
+# Terraform CLI configuration files
+.terraformrc
+terraform.rc
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+#####################################
+# Terraform lock file (OPTIONAL)
+#####################################
+# Keep this if working in team
+# .terraform.lock.hcl
+
+#####################################
+# Binary / Provider Files
+#####################################
+*.exe
+*.zip
+*.tar
+*.gz
+
+#####################################
+# Logs
+#####################################
+*.log
+
+#####################################
+# OS Files
+#####################################
+.DS_Store
+Thumbs.db
+
+#####################################
+# VS Code
+#####################################
+.vscode/
+
+#####################################
+# Node (if using Node app)
+#####################################
+node_modules/
+npm-debug.log*
+
+#####################################
+# Docker
+#####################################
+*.env
+.env
