@@ -19,7 +19,7 @@ WORKDIR /app
 
 # Copy only package files and install dependencies
 COPY devops-app/package*.json ./
-RUN npm ci --omit=production
+RUN npm ci --omit=dev
 
 # Copy application code
 COPY devops-app/. .
